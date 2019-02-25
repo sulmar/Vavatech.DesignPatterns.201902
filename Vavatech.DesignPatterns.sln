@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.DesignPatterns.SingletonPattern", "Vavatech.DesignPatterns.SingletonPattern\Vavatech.DesignPatterns.SingletonPattern.csproj", "{5380541B-A41A-4DDB-A696-680AB7159793}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "Vavatech.DesignPatterns.SingletonPattern\SingletonPattern.csproj", "{5380541B-A41A-4DDB-A696-680AB7159793}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creationals Patterns", "Creationals Patterns", "{3DC6D017-3391-4C2D-8C9C-DD1C48B9D3BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structurals Patterns", "Structurals Patterns", "{BE6796E1-B9EE-4156-91E9-DF9AACE2F659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behaviorals Patterns", "Behaviorals Patterns", "{2F03A24A-3C0D-4F30-AFE4-3A303BE1B1C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericDemo", "GenericDemo\GenericDemo.csproj", "{425DC68A-E84E-40A6-B383-FEF43E00105B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{8CCCF1ED-C36A-4978-B89F-F1236B9593F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "TemplateMethod\TemplateMethod.csproj", "{495B2539-E320-4F41-A628-83A2929DF3F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,26 @@ Global
 		{5380541B-A41A-4DDB-A696-680AB7159793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5380541B-A41A-4DDB-A696-680AB7159793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5380541B-A41A-4DDB-A696-680AB7159793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425DC68A-E84E-40A6-B383-FEF43E00105B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425DC68A-E84E-40A6-B383-FEF43E00105B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425DC68A-E84E-40A6-B383-FEF43E00105B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425DC68A-E84E-40A6-B383-FEF43E00105B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCCF1ED-C36A-4978-B89F-F1236B9593F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCCF1ED-C36A-4978-B89F-F1236B9593F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCCF1ED-C36A-4978-B89F-F1236B9593F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCCF1ED-C36A-4978-B89F-F1236B9593F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495B2539-E320-4F41-A628-83A2929DF3F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495B2539-E320-4F41-A628-83A2929DF3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495B2539-E320-4F41-A628-83A2929DF3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495B2539-E320-4F41-A628-83A2929DF3F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5380541B-A41A-4DDB-A696-680AB7159793} = {3DC6D017-3391-4C2D-8C9C-DD1C48B9D3BC}
+		{8CCCF1ED-C36A-4978-B89F-F1236B9593F4} = {3DC6D017-3391-4C2D-8C9C-DD1C48B9D3BC}
+		{495B2539-E320-4F41-A628-83A2929DF3F3} = {2F03A24A-3C0D-4F30-AFE4-3A303BE1B1C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {936827D8-4A62-4D1E-B966-477365002BF7}
