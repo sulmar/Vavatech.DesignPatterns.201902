@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy
+namespace Repository
 {
-    public interface IService<TEntity>
+    public interface IRepository<TEntity>
     {
         IEnumerable<TEntity> Get();
         TEntity Get(int id);
@@ -15,18 +15,18 @@ namespace Strategy
         void Remove(int id);    
     }
 
-    public interface IVisitService : IService<Visit>
+    public interface IVisitRepository : IRepository<Visit>
     {
 
     }
 
-    public interface IPatientService : IService<Patient>
+    public interface IPatientRepository : IRepository<Patient>
     {
         Patient Get(string pesel);
     }
 
 
-    public class DbPatientService : IPatientService
+    public class DbPatientRepository : IPatientRepository
     {
         private MyContext context;
 
@@ -69,12 +69,12 @@ namespace Strategy
 
     }
 
-    public class FakePatientService : IPatientService
+    public class FakePatientRepository : IPatientRepository
     {
         private readonly IList<Patient> patients;
 
 
-        public FakePatientService()
+        public FakePatientRepository()
         {
             patients = new List<Patient>();
         }

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy
+namespace Repository
 {
     class Program
     {
         static void Main(string[] args)
         {
 
-            IPatientService patientService = new DbPatientService();
+            IPatientRepository patientRepository = new DbPatientRepository();
 
-            var patients = patientService..Search("Marcin");
+            var patients = patientRepository.Get();
 
 
 
