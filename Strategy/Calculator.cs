@@ -58,14 +58,14 @@ namespace Strategy.Better
 
     public class HappyHoursDiscountStrategy : ICanDiscountStrategy
     {
+        private readonly TimeSpan From;
+        private readonly TimeSpan To;
+            
         public HappyHoursDiscountStrategy(TimeSpan from, TimeSpan to)
         {
             From = from;
             To = to;
         }
-
-        public TimeSpan From { get; set; }
-        public TimeSpan To { get; set; }
 
         public bool CanDiscount(Visit visit)
         {
