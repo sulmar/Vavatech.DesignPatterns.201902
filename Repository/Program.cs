@@ -24,9 +24,12 @@ namespace Repository
         }
     }
 
+    public abstract class Base
+    {
 
+    }
 
-    public class Patient
+    public class Patient : Base
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -46,7 +49,7 @@ namespace Repository
     }
 
 
-    public class Visit
+    public class Visit : Base
     {
         public DateTime VisitDate { get; set; }
         public Patient Patient { get; set; }

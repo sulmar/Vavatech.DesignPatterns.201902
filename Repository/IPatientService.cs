@@ -26,47 +26,56 @@ namespace Repository
     }
 
 
-    public class DbPatientRepository : IPatientRepository
+    public abstract class DbEntityRepository<TEntity> : IRepository<TEntity>
+        where TEntity : Base
     {
-        private MyContext context;
+        private readonly IList<TEntity> entities;
 
-        public void Add(Patient patient)
+        public virtual void Add(TEntity entity)
         {
-            context.Patients.Add(patient);
-            context.SaveChanges();
-
+            entities.Add(entity);
         }
 
-        public IEnumerable<Patient> Get()
+        public virtual IEnumerable<TEntity> Get()
         {
             throw new NotImplementedException();
         }
 
-        public Patient Get(int id)
+        public virtual TEntity Get(int id)
         {
             throw new NotImplementedException();
         }
 
+        public virtual void Remove(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void Update(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class DbVisitRepository : 
+        DbEntityRepository<Visit>, IVisitRepository
+    {
+        
+    }
+
+    public class DbPatientRepository 
+        : DbEntityRepository<Patient>, IPatientRepository
+    {
         public Patient Get(string pesel)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(int id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Update(Patient patient)
+        public override void Remove(int id)
         {
-            throw new NotImplementedException();
+            base.Remove(id);
         }
-
-        public IList<Patient> Search(string firstname)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 
     public class FakePatientRepository : IPatientRepository
